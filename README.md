@@ -22,6 +22,16 @@ See `window_checker.py --help`
  2. Upload the code to AWS Lambda using the zip file
  3. Set the configuration to use `timezone_converter.lambda_handler` as the handler of the function.
 
+## Useful Resources
+
+ * https://nylas.com/blog/rrules/
+ * http://crsmithdev.com/arrow/
+ * https://julien.danjou.info/blog/2015/python-and-timezones
+ * https://coderwall.com/p/7t3qdq/datetimes-and-timezones-and-dst-oh-my
+ * https://labix.org/python-dateutil
+ * https://dateutil.readthedocs.io/en/stable/
+ * http://www.kanzaki.com/docs/ical/rrule.html
+
 License and Authors
 -------------------
 - Author: Chris Fordham (<chris@fordham-nagy.id.au>)
