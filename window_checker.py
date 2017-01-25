@@ -106,7 +106,8 @@ def window_check(start_hour, start_minute, start_rule, stop_hour, stop_minute, s
         schedule_info['event_active'] = 'true'
     elif on_today(next_stop_dt, tz):
         if now_dt.datetime < next_stop_dt:
-            schedule_info['event_active'] = 'true'
+            if not on_today(next_start_dt, tz):
+                schedule_info['event_active'] = 'true'
 
     return schedule_info
 
