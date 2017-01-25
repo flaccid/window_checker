@@ -135,7 +135,15 @@ def lambda_handler(event, context):
                 if 'querystring' in event['params']:
                     params[key] = event['params']['querystring'][key]
 
-    return window_check(eval(keys))
+    return window_check(
+        start_hour=params['start_hour'],
+        start_minute=params['start_minute'],
+        start_rule=params['start_rule'],
+        stop_hour=params['stop_hour'],
+        stop_minute=params['stop_minute'],
+        stop_rule=params['stop_rule'],
+        tz=params['tz']
+    )
 
 def cli():
     """Entrypoint from CLI."""
